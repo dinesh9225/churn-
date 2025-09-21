@@ -19,7 +19,7 @@ df = load_data()
 
 st.title("Customer Churn Prediction")
 st.write("## Dataset Preview")
-st.write(df.head())
+st.write(df.tail())
 st.write(f"Dataset Shape: {df.shape}")
 
 # Prepare features and target
