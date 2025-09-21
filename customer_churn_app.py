@@ -37,9 +37,9 @@ st.sidebar.header("Input Customer Data")
 input_dict = {}
 for feature in X.columns:
     if np.issubdtype(X[feature].dtype, np.number):
-        min_val = float(X[feature].min())
-        max_val = float(X[feature].max())
-        mean_val = float(X[feature].mean())
+        min_val = int(X[feature].min())
+        max_val = int(X[feature].max())
+        mean_val = int(X[feature].mean())
         input_dict[feature] = st.sidebar.number_input(f"{feature}", min_value=min_val, max_value=max_val, value=mean_val)
     else:
         input_dict[feature] = st.sidebar.selectbox(f"{feature}", options=X[feature].unique())
